@@ -13,6 +13,8 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     />
+    <!-- aos library -->
+    <link rel="stylesheet" href="css/aos.css" />
     <!-- main template css file -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -63,10 +65,10 @@
       <h2>We don’t just craft ads, we craft experiences</h2>
       <div class="image">
         <img src="images/two-no.png" alt="" />
-        <p class="l-top">CREATIVE POWERHOUSE</p>
-        <p class="l-bottom">DATA-DRIVEN DECISIONS</p>
-        <p class="r-top">STORY TELLING ALCHEMISTS</p>
-        <p class="r-bottom">DIGITAL PLAYGROUND</p>
+        <p class="l-top" data-aos="fade-up">CREATIVE POWERHOUSE</p>
+        <p class="l-bottom" data-aos="fade-up">DATA-DRIVEN DECISIONS</p>
+        <p class="r-top" data-aos="fade-left">STORY TELLING ALCHEMISTS</p>
+        <p class="r-bottom" data-aos="fade-left">DIGITAL PLAYGROUND</p>
       </div>
     </div>
     <!-- End more -->
@@ -168,7 +170,7 @@
         <h2 class="main-title">Our services</h2>
 
         <div class="content">
-          <div class="box">
+          <div class="box" data-aos="fade-left">
             <div class="left-side">
               <img src="images/in.jpg" alt="" />
             </div>
@@ -197,7 +199,7 @@
               </ul>
             </div>
           </div>
-          <div class="box">
+          <div class="box" data-aos="fade-right">
             <div class="left-side">
               <img src="images/search.png" alt="" />
             </div>
@@ -228,7 +230,7 @@
               </ul>
             </div>
           </div>
-          <div class="box">
+          <div class="box" data-aos="fade-left">
             <div class="left-side">
               <img src="images/mony.png" alt="" />
             </div>
@@ -254,7 +256,7 @@
               </ul>
             </div>
           </div>
-          <div class="box">
+          <div class="box" data-aos="fade-up">
             <div class="left-side">
               <img src="images/mony.png" alt="" />
             </div>
@@ -289,7 +291,7 @@
       <div class="container">
         <div class="all">
           <h4>ATL SERVICSE</h4>
-          <div class="box l-b">
+          <div class="box l-b" data-aos="fade-up">
             <i class="fa-solid fa-camera"></i>
             <h4>Photography and Videography</h4>
             <p>
@@ -300,7 +302,7 @@
               tracking
             </p>
           </div>
-          <div class="box l-t">
+          <div class="box l-t" data-aos="fade-left">
             <i class="fa-solid fa-camera"></i>
             <h4>Billboards and outdoors</h4>
             <p>
@@ -309,7 +311,7 @@
               designing
             </p>
           </div>
-          <div class="box r-t">
+          <div class="box r-t" data-aos="fade-left">
             <i class="fa-solid fa-radio"></i>
             <h4>Radio Advertising</h4>
             <p>
@@ -318,7 +320,7 @@
               radio stations
             </p>
           </div>
-          <div class="box m-t">
+          <div class="box m-t" data-aos="fade-left">
             <i class="fa-solid fa-radio"></i>
             <h4>Motion Graphics Videos</h4>
             <p>
@@ -326,7 +328,7 @@
               animations to complex scenes involving 2D/3D and motion tracking
             </p>
           </div>
-          <div class="box r-b">
+          <div class="box r-b" data-aos="fade-up">
             <i class="fa-solid fa-tv"></i>
             <h4>Tv Advertising</h4>
             <p>
@@ -401,6 +403,9 @@
 
     <!-- Start Footer -->
     <div class="footer">
+      <span class="up-page"
+        ><a href="#home"><i class="fa-solid fa-arrow-up"></i></a
+      ></span>
       <div class="container">
         <div class="box">
           <h3>Merakianz</h3>
@@ -454,18 +459,10 @@
             </div>
           </div>
         </div>
-        <div class="box footer-gallery">
-          <img decoding="async" src="imgs/gallery-01.png" alt="" />
-          <img decoding="async" src="imgs/gallery-02.png" alt="" />
-          <img decoding="async" src="imgs/gallery-03.jpg" alt="" />
-          <img decoding="async" src="imgs/gallery-04.png" alt="" />
-          <img decoding="async" src="imgs/gallery-05.jpg" alt="" />
-          <img decoding="async" src="imgs/gallery-06.png" alt="" />
-        </div>
       </div>
     </div>
     <!-- End Footer -->
-
-    <script src="main.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

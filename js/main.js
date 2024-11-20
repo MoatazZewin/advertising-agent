@@ -8,6 +8,19 @@ const header = document.getElementsByClassName("header")[0];
 
 const sections = document.querySelectorAll("section");
 
+AOS.init({
+  duration: 800,
+  easing: "slide",
+});
+
+children.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    list.classList.remove("show");
+    listIcon.classList.remove("show");
+    btnToggle.ariaExpanded = !JSON.parse(btnToggle.ariaExpanded);
+  });
+});
+
 btnToggle.addEventListener("click", (event) => {
   list.classList.toggle("show");
   listIcon.classList.toggle("show");
