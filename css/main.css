@@ -163,6 +163,8 @@ a {
   width: 30px;
   height: 2px;
   top: -8px;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
 }
 
 .header .container nav button[aria-expanded="true"] span::before {
@@ -186,6 +188,8 @@ a {
   width: 30px;
   height: 2px;
   top: 8px;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
 }
 
 .header nav ul li:not(:last-child) a:active {
@@ -253,6 +257,7 @@ a {
 
 .header nav #header-list.show {
   top: calc(100% + 48px);
+  text-align: center;
 }
 
 @media (max-width: 450px) {
@@ -602,3 +607,202 @@ a {
   }
 }
 /* End about as */
+
+/* Start Features */
+.features {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: white;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.features > h2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 20px;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.features .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.features .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+.features .box .img-holder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 100%;
+  height: 100%;
+}
+.features .box .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+.features .box .img-holder img {
+  max-width: 100%;
+}
+
+.features .box h2 {
+  position: relative;
+  font-size: 40px;
+  margin: auto;
+  width: fit-content;
+}
+.features .box h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  height: 5px;
+  width: calc(100% - 30px);
+}
+.features .box p {
+  line-height: 2;
+  font-size: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  color: #777;
+}
+
+.features .quality .img-holder::before {
+  background-color: rgb(245 153 54 / 60%);
+}
+.features .quality h2::after {
+  background-color: var(--secondary-color);
+}
+.features .quality a {
+  color: var(--secondary-color);
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .time .img-holder::before {
+  background-color: rgb(0 150 136 / 60%);
+}
+.features .time h2::after {
+  background-color: #009688;
+}
+.features .time a {
+  color: var(--secondary-color);
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .passion .img-holder::before {
+  background-color: rgb(3 169 244 / 60%);
+}
+.features .passion h2::after {
+  background-color: #03a9f4;
+}
+.features .passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .box:hover a {
+  background-position: left bottom;
+  color: white;
+}
+/* End Features */
+
+/* Start services */
+.services {
+  padding: 60px 0;
+  background: linear-gradient(
+    to bottom,
+    lightgray 0%,
+    white 5%,
+    white 97%,
+    lightgray 100%
+  );
+}
+
+.services .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services .main-title {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 20px;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.services .box {
+  display: flex;
+
+  justify-content: center;
+}
+
+.services .box .left-side {
+  width: 40%;
+  position: relative;
+}
+
+.services .box .left-side img {
+  max-width: 100%;
+  height: 100%;
+}
+.services .box .text {
+  padding: 20px;
+  width: 50%;
+}
+
+.services .box .text h4 {
+  font-size: 1.5rem;
+}
+
+.services .box .text p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.services .box .text i {
+  color: var(--secondary-color);
+}
+
+.services .box .text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .services .box {
+    flex-direction: column;
+  }
+  .services .box .left-side {
+    width: 100%;
+  }
+
+  .services .box .text {
+    width: 100%;
+  }
+}
+/* End services */
