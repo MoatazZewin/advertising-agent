@@ -21,4 +21,25 @@ window.addEventListener("scroll", () => {
   } else {
     header.classList.add("sticky");
   }
+
+  // Loop through sections to find which one is in the viewport
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY <= sectionTop + sectionHeight
+    ) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  // Remove "active" class from all links and add to the current section's link
+  children.forEach((link) => {
+    link.classList.remove("active");
+    if (link.children[0].getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
 });
