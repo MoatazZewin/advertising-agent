@@ -4,7 +4,7 @@ const listIcon = document.getElementById("icons");
 const children = [...list.children];
 const buttons = document.getElementsByClassName("days");
 const btnContent = [...document.getElementsByClassName("tab-pane")];
-const header = document.getElementsByTagName("header")[0];
+const header = document.getElementsByClassName("header")[0];
 
 const sections = document.querySelectorAll("section");
 
