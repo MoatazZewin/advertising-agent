@@ -1024,6 +1024,25 @@ a {
 .discount .form [type="submit"]:hover {
   background-color: var(--secondary-color);
 }
+.recept {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#result {
+  padding-left: 10px;
+}
+
+@media (max-width: 500px) {
+  .recept {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .rec-p {
+    width: 100%;
+  }
+}
 
 .discount .form [type="submit"]:disabled {
   background-color: gray;
