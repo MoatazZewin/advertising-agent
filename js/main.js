@@ -8,6 +8,28 @@ const header = document.getElementsByClassName("header")[0];
 
 const sections = document.querySelectorAll("section");
 
+const numOne = document.getElementsByClassName("num-1")[0];
+const numTwo = document.getElementsByClassName("num-2")[0];
+let randomNum1 = Math.floor(Math.random() * 20) + 1;
+let randomNum2 = Math.floor(Math.random() * 20) + 1;
+let total = randomNum1 + randomNum2;
+const result = document.getElementById("result");
+const submit = document.querySelector("input[type=submit]");
+submit.disabled = true;
+console.log(submit);
+
+result.addEventListener("input", (event) => {
+  let answer = event.target.value;
+  console.log(answer);
+  if (total == +answer) {
+    submit.disabled = false;
+  } else {
+    submit.disabled = true;
+  }
+});
+
+numOne.textContent = randomNum1 + " ";
+numTwo.textContent = randomNum2 + " ";
 AOS.init({
   duration: 800,
   easing: "slide",

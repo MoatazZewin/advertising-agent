@@ -1022,7 +1022,12 @@ a {
   transition: var(--main-transition);
 }
 .discount .form [type="submit"]:hover {
-  background-color: var(--main-color-alt);
+  background-color: var(--secondary-color);
+}
+
+.discount .form [type="submit"]:disabled {
+  background-color: gray;
+  pointer-events: none;
 }
 .discount .content {
   text-align: center;
